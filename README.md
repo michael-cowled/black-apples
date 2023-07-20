@@ -26,7 +26,11 @@ Rather than working on the annotations, this script uses those annotations and t
 5. Removal of features associated with the blanks based on certain thresholds, creating the dataframe "data.filt.blanks"
 6. Comparison of features associated with whole black apple extracts (Apple_natural), excisions of fungi from black apples (Apple_excision) or  fungal isolates cultivated in an OSMAC approach (Laboratory)
 7. Extraction of features found in both the fungal isolates grown in the lab and on black apples (in.both2)
-8. Visualisation of compound classes of fungal features found in black apples using NPclassifier superclasses. 
+8. Visualisation of compound classes of fungal features found in black apples using NPclassifier superclasses.
+
+## Superclass piecharts (Superclass-pie-chart.R)
+
+This script goes a level deeper than that for step 8 in Data-analysis.R, and can profile the superclasses for a given fungal genera (with the potential to generate based on species, and/or other criteria).
 
 ## Bubble chart (Bubble-chart.R)
 
@@ -34,15 +38,16 @@ This script generates a bubble chart visualising the proportion of different sup
 
 1. Loading of libraries: ggplot2 and reshape2
 2. In a similar manner to that used for step 7 in data analysis above, the features associated with black apple fungi grown in the lab and features associated with black apples were extracted
-3. Calculates the NP superclasses associated with each indvidual black apple extract
-4. Bubble chart is created using the generated dataframe extracted
+3. Calculates the NP superclasses associated with each indvidual black apple extract using the created apple.superclasses
+4. Black apple extract IDs are appended with an external metadata file "appleIDs.csv"
+5. Bubble chart is created using ggplot2, visualizing the proportion of different superclasses for each apple sample. The size of each bubble represents the proportion of metabolites in that superclass, and the color of the bubbles represents the superclass category
 
+## Fungal species present in given black apple extracts (Species-checker.R)
 
+This script generates a heatmap and a barchart indicating the frequency of species present in given black apple extracts. Below is a step-by-step explanation of the script:
 
-Calculating Superclasses Proportion: The code groups the features detected in both fungus and apple samples based on their superclasses. It calculates the proportion of each superclass and prepares the data for the bubble chart.
-
-Generating Bubble Chart: The code iterates through different apple samples and calculates the proportion of superclasses for each sample using the apple.superclasses function. It then combines the data into a new dataframe df3.
-
-Merging with Apple IDs: The code reads another CSV file, "appleIDs.csv," containing information about apple IDs, and merges it with the dataframe df3 to convert filenames to appleIDs.
-
-Plotting the Bubble Chart: Finally, a bubble chart is created using ggplot2, visualizing the proportion of different superclasses for each apple sample. The size of each bubble represents the proportion of metabolites in that superclass, and the color of the bubbles represents the superclass category.
+1. Extracts a list of features indicative of a specified species (e.g. "polonicum")
+2. Queries black apple extracts using the apple.finder functional to find which contain features associated with the above list of features (with strict qualification criteria)
+3. Using the above code, a user-made .csv file was made to tabulate which black apple extracts contained which fungal species
+4. Generates a heatmap using this user-made .csv file indicating the presence of each species in each individual black apple extract
+5. Generates a barchart indicating the frequencing each species is detected in the black apples as a whole
