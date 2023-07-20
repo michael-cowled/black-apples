@@ -2,7 +2,7 @@
 The repository here contains code used in the data analysis and preparation of the manuscript: XXXX
 
 ## Tidying of annotations
-SCRIPT.XXX
+[Tidy-annotations.R]([URL](https://github.com/michael-cowled/black-apples/blob/main/Tidy-annotations.R))
 
 The provided script is a data processing pipeline that involves various data manipulation and tidying operations to merge and filter data from multiple CSV files. Below is a step-by-step explanation of the script:
 
