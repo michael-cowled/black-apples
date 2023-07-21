@@ -6,7 +6,7 @@ The repository here contains code used in the data analysis and preparation of t
 The provided script is a data processing pipeline that involves various data manipulation and tidying operations to merge and filter data from multiple CSV files. Below is a step-by-step explanation of the script:
 
 1. Loading of libraries: including dplyr, tidyr, stringr, and jsonlite
-2. Importing, extraction and tidying of NP Databases: NPatlas and MIBIG
+2. Importing, extraction and tidying of NP Databases: NPAtlas and MiBIG
 3. Merging annotations from GNPS, dereplicator, CSI-FingerID and PCDL in-house database with the appropriate metadata
 4. Tidying compound names and removal of stereochemistry from SMILES in the annotation list and NP databases
 5. Querying annotation list against the NP databases
