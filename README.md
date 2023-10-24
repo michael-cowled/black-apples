@@ -59,4 +59,14 @@ This script can be used to query the frequency of a given feature or features pr
 1. User input features to query
 2. Sets up the functions needed to query black apples
 3. Generates a data frame of which apples contain the queried features
-4. Calculates the number of black apples which contain at least one of the queried features.
+4. Calculates the number of black apples which contain at least one of the queried features
+
+## Features present in given black apple extracts (Perc-Abundances.R)
+
+This script calculates the average abundance of features present in black apples compared to the OSMAC study.  Below is a step-by-step explanation of the script:
+
+1. Normalises data in each sample to the maximum peak area
+2. Calculates the average abundance for each feature across the apple extracts
+3. Calculates the average abundance for each feature across the OSMAC extracts
+4. Merges the data together
+5. Calculates the ratio of the apple averages to the OSMAC averages
