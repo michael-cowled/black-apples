@@ -7,8 +7,8 @@ species_data <- data.filt.blanks[,-c(1,2,4:7)] %>%
   mutate_if(is.numeric, ~1 * (. > 0)) %>%
   colSums() %>%
   as.data.frame() %>%
-  filter(. >= 3) ##filters for features that are present in at least 3 samples
-species_target_list <- row.names(species_data)  
+  filter(. >=3) ##filters for features that are present in at least 3 samples
+species_target_list <- row.names(species_data)
 
 ##Changed above code to work with row_ID instead of feature ID
 
@@ -27,8 +27,12 @@ for (i in species_target_list) {
 #Calculates the number of apples with selected features:
 df <- mutate_if(df, is.numeric, ~1 * (. > 0))
 df <- mutate(df, Total = rowSums(df))
-paste0(sum(df$Total >= 6), " of total ", nrow(df), " apples") ##Need at least 5 features to be considered present
-pol <- df$Total >= 6
+paste0(sum(df$Total >= 3), " of total ", nrow(df), " apples") ##Need at least 3 features to be considered present
+pol <- df$Total >= 3
+
+write.csv(as.data.frame(df$Total >= 3), "Test.csv") 
+#Need to manually make "Test.csv" into "Apples with Fungus present.csv"
+#Maybe convert the above to a function with input species to create complete .csv at some point
 
 
 ##Heatmap of which fungus is present in which apple
