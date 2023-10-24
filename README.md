@@ -51,3 +51,12 @@ This script generates a heatmap and a barchart indicating the frequency of speci
 3. Using the above code, a user-made .csv file was made to tabulate which black apple extracts contained which fungal species
 4. Generates a heatmap using this user-made .csv file indicating the presence of each species in each individual black apple extract
 5. Generates a barchart indicating the frequencing each species is detected in the black apples as a whole
+
+## Features present in given black apple extracts (Feature-checker.R)
+
+This script can be used to query the frequency of a given feature or features present in given black apple extracts. Below is a step-by-step explanation of the script:
+
+1. User input features to query
+2. Sets up the functions needed to query black apples
+3. Generates a data frame of which apples contain the queried features
+4. Calculates the number of black apples which contain at least one of the queried features.
