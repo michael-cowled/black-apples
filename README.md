@@ -1,5 +1,5 @@
 # Black Apple Project
-The repository here contains code used in the data analysis and preparation of the manuscript: Unveiling the Microbial Diversity and Associated Secondary Metabolism on Black Apples (https://doi.org/10.1101/2023.11.02.565319)
+The repository here contains code used in the data analysis and preparation of the manuscript: Unveiling the Fungal Diversity and Associated Secondary Metabolism on Black Apples ([https://doi.org/10.1101/2023.11.02.565319](https://doi.org/10.1128/aem.00342-24))
 
 ## Tidying of annotations (Tidy-annotations.R)
 
