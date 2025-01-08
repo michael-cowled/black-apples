@@ -19,7 +19,7 @@ The provided script is a data processing pipeline that involves various data man
 
 Rather than working on the annotations, this script uses those annotations and the raw data output following MZMine to perform some data analysis and visualization using the dplyr, tidyr, and ggplot2 libraries in R. Below is a step-by-step explanation of the script:
 
-1. Loading of libraries" dplyr, tidyr, viridis, and ggplot2
+1. Loading of libraries: dplyr, tidyr, viridis, and ggplot2
 2. Importing of tidied GNPS quant file (GNPS_tidied.csv) and metadata (same format as GNPS is fine)
 3. Removing primary metabolites using the tidy annotations (app.feats)
 4. Tidying and merging of data with metadata
