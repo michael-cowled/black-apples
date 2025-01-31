@@ -1,6 +1,8 @@
 # Black Apple Project
 The repository here contains code used in the data analysis and preparation of the manuscript: Unveiling the Fungal Diversity and Associated Secondary Metabolism on Black Apples ([https://doi.org/10.1101/2023.11.02.565319](https://doi.org/10.1128/aem.00342-24)). The GNPS-FBMN workflow and results can be found here: ([https://gnps.ucsd.edu/ProteoSAFe/status.jsp?task=71057036992e4ac6aef647aab6cf7557](https://gnps.ucsd.edu/ProteoSAFe/status.jsp?task=71057036992e4ac6aef647aab6cf7557)), and the associated raw data under MASSIVE MSV000092823.
 
+If you use or ammend any of the scripts utilised in this work, please cite the above publication.
+
 ## Tidying of annotations (Tidy-annotations.R)
 
 The provided script is a data processing pipeline that involves various data manipulation and tidying operations to merge and filter data from multiple CSV files. Below is a step-by-step explanation of the script:
